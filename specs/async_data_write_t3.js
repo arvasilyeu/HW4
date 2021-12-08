@@ -45,6 +45,6 @@ describe ('currency exchange', function () {
         const exchangeResult = await $('//*[@id="withdrew"]').getText()
         const sum = necessaryObjects.map( (object) => object.num ).join("")
         const rate = await $("#currency-rate").getText();
-        expect(exchangeResult).toEqual(`${sum} => ${+sum * +rate}`);
+        expect(exchangeResult).toEqual(`${sum} => ${sum * rate}`);
     })
 })
